@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://g0khw6r4tgt2"]
+
+[ext_resource type="Script" uid="uid://ckbnnjx7063fp" path="res://menu/settings_menu.gd" id="1_ctk4e"]
+[ext_resource type="Texture2D" uid="uid://csqdvwvp0n5gr" path="res://assets/images/ui/button.png" id="2_kun5g"]
+[ext_resource type="FontFile" uid="uid://v0ffru6xd5o1" path="res://assets/fonts/VT323-Regular.ttf" id="3_ursa8"]
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=674880108 node_paths=PackedStringArray("back_button", "master_volume_slider", "music_volume_slider", "effects_volume_slider", "display_fullscreen_check")]
+script = ExtResource("1_ctk4e")
+back_button = NodePath("VBoxContainer/BackButton")
+master_volume_slider = NodePath("VBoxContainer/VBoxContainer/MasterVolumeSlider")
+music_volume_slider = NodePath("VBoxContainer/VBoxContainer/MusicVolumeSlider")
+effects_volume_slider = NodePath("VBoxContainer/VBoxContainer/EffectsVolumeSlider")
+display_fullscreen_check = NodePath("VBoxContainer/VBoxContainer2/DisplayFullscreenCheck")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1288824080]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1432804388]
+layout_mode = 2
+text = "Sound Settings"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="GridContainer" parent="VBoxContainer" unique_id=1315142507]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 24
+columns = 2
+
+[node name="MasterVolumeLabel" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=552076860]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer" unique_id=92304695]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+
+[node name="MusicVolumeLabel" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=427341489]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer" unique_id=1898455548]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+
+[node name="EffectsVolumeLabel" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=167365105]
+layout_mode = 2
+text = "Sound Effects"
+
+[node name="EffectsVolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer" unique_id=1857348371]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+
+[node name="Display Settings" type="Label" parent="VBoxContainer" unique_id=1191488957]
+layout_mode = 2
+text = "Display Settings"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="GridContainer" parent="VBoxContainer" unique_id=1599824080]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 24
+columns = 2
+
+[node name="DisplayFullscreenLabel" type="Label" parent="VBoxContainer/VBoxContainer2" unique_id=1687006695]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Display Fullscreen"
+
+[node name="DisplayFullscreenCheck" type="CheckButton" parent="VBoxContainer/VBoxContainer2" unique_id=536904529]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1408146554]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="VBoxContainer" unique_id=1678300884]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_kun5g")
+
+[node name="Label" type="Label" parent="VBoxContainer/BackButton" unique_id=350308110]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.20784314, 0.23137255, 0.28627452, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("3_ursa8")
+theme_override_font_sizes/font_size = 48
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1

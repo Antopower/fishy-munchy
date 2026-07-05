@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://clh37fmw47y8t"]
+
+[ext_resource type="Script" uid="uid://ddl1f78xb0efq" path="res://menu/menu_context.gd" id="1_j0t7f"]
+[ext_resource type="PackedScene" uid="uid://bj2il7gwh6udq" path="res://menu/main_menu.tscn" id="2_g18jx"]
+[ext_resource type="PackedScene" uid="uid://g0khw6r4tgt2" path="res://menu/settings_menu.tscn" id="3_6nwqt"]
+[ext_resource type="Texture2D" uid="uid://bhp22g7c7wrwi" path="res://assets/images/main-menu-bg.png" id="4_pbjm4"]
+
+[node name="Menu" type="Node2D" unique_id=1380469924]
+script = ExtResource("1_j0t7f")
+main_menu_packed = ExtResource("2_g18jx")
+settings_menu_packed = ExtResource("3_6nwqt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=691948481]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1339267226]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_pbjm4")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=132379131]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8392157)

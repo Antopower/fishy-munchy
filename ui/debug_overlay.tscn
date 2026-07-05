@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://jbivaekn7f41"]
+
+[ext_resource type="Script" uid="uid://bxn8jebg3bxuv" path="res://ui/debug_overlay.gd" id="1_tasbd"]
+
+[node name="DebugOverlay" type="Control" unique_id=1502708187]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_tasbd")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=229510343]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=548541282]
+layout_mode = 2
+alignment = 2
+
+[node name="FpsLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1231434644]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4570796, 0.7129745, 1.1551381e-06, 1)
+text = "FPS: 40FPS"
+
+[node name="VersionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=130234236]
+layout_mode = 2
+text = "Version: "

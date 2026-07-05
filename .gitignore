@@ -1,0 +1,17 @@
+# Godot temporary files
+*.tmp
+
+# Godot cache and imports
+.godot/
+*.uid
+
+# Godot export files
+export/
+/android/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Others
+/addons/

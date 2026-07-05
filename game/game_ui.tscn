@@ -1,0 +1,279 @@
+[gd_scene format=3 uid="uid://bd7jv1vqx0qee"]
+
+[ext_resource type="Texture2D" uid="uid://53e8fhl0irvd" path="res://assets/images/ui/ui-info.png" id="1_bma8u"]
+[ext_resource type="Script" uid="uid://bvoew0tw0frsw" path="res://game/game_ui.gd" id="1_yvtb5"]
+[ext_resource type="Texture2D" uid="uid://bruj5c0cfslgs" path="res://assets/images/ui/coin.png" id="2_fct72"]
+[ext_resource type="FontFile" uid="uid://v0ffru6xd5o1" path="res://assets/fonts/VT323-Regular.ttf" id="3_ru5ln"]
+[ext_resource type="Texture2D" uid="uid://cglca4v1g4fe8" path="res://assets/images/ui/seeds.png" id="4_ru5ln"]
+[ext_resource type="Texture2D" uid="uid://sw68vqvq5t7w" path="res://assets/images/ui/water-drop.png" id="5_v1bdg"]
+[ext_resource type="Texture2D" uid="uid://72jvj0x3m64o" path="res://assets/images/ui/ui-info-short.png" id="6_qrkc0"]
+[ext_resource type="Texture2D" uid="uid://cgjxaxowjk73e" path="res://assets/images/ui/watering-can.png" id="7_yvtb5"]
+
+[node name="GameUI" type="Control" unique_id=652860278]
+process_mode = 4
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvtb5")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2115146957]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1485729777]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=719709232]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+columns = 3
+
+[node name="CreditInfo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1697118492]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_bma8u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/CreditInfo" unique_id=1284026091]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -25.0
+offset_right = 41.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="CreditLogo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer/CreditInfo/HBoxContainer" unique_id=1955117150]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("2_fct72")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/CreditInfo/HBoxContainer" unique_id=1481146005]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="CreditLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/CreditInfo/HBoxContainer/VBoxContainer" unique_id=726624583]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 24
+text = "Credits"
+uppercase = true
+
+[node name="CreditAmount" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/CreditInfo/HBoxContainer/VBoxContainer" unique_id=1988633223]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8352941, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 27
+text = "500"
+
+[node name="SeedInfo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=764897157]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_bma8u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/SeedInfo" unique_id=1361493112]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -25.0
+offset_right = 41.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="SeedLogo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer/SeedInfo/HBoxContainer" unique_id=1231195402]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("4_ru5ln")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/SeedInfo/HBoxContainer" unique_id=465583011]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="SeedLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/SeedInfo/HBoxContainer/VBoxContainer" unique_id=822563123]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 24
+text = "Seeds:"
+uppercase = true
+
+[node name="SeedAmount" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/SeedInfo/HBoxContainer/VBoxContainer" unique_id=85433260]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85882354, 0.6431373, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 27
+text = "50"
+
+[node name="WaterInfo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=633371589]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_bma8u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/WaterInfo" unique_id=74551412]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -25.0
+offset_right = 41.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="WaterLogo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer/WaterInfo/HBoxContainer" unique_id=152865431]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("5_v1bdg")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/WaterInfo/HBoxContainer" unique_id=1978174471]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="WaterLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/WaterInfo/HBoxContainer/VBoxContainer" unique_id=1533984429]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 24
+text = "Water:"
+uppercase = true
+
+[node name="WaterAmount" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/WaterInfo/HBoxContainer/VBoxContainer" unique_id=366972103]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14117648, 0.62352943, 0.87058824, 1)
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 27
+text = "80%"
+
+[node name="ReputationInfo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=871714092]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_bma8u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/ReputationInfo" unique_id=1912067916]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -25.0
+offset_right = 41.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="ReputationLogo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer/ReputationInfo/HBoxContainer" unique_id=67739650]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("5_v1bdg")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/ReputationInfo/HBoxContainer" unique_id=1171854104]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="ReputationLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/ReputationInfo/HBoxContainer/VBoxContainer" unique_id=990638424]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 24
+text = "Rep:"
+uppercase = true
+
+[node name="ReputationAmount" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/ReputationInfo/HBoxContainer/VBoxContainer" unique_id=1264111307]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14117648, 0.62352943, 0.87058824, 1)
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 27
+text = "1"
+
+[node name="ShopButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1725582674]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_qrkc0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ShopButton" unique_id=1044529460]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -24.5
+offset_right = 16.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -3
+
+[node name="ShopLabel" type="Label" parent="MarginContainer/VBoxContainer/ShopButton/VBoxContainer" unique_id=325684703]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ru5ln")
+theme_override_font_sizes/font_size = 20
+text = "Shop"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ShopButton/VBoxContainer" unique_id=1195318751]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("7_yvtb5")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ShopButton" to="." method="_on_shop_button_pressed"]

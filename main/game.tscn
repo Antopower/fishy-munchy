@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cgg231rdsf1b4"]
+
+[ext_resource type="Script" uid="uid://guusl8yeoq5t" path="res://main/root_context.gd" id="1_e64el"]
+[ext_resource type="PackedScene" uid="uid://clh37fmw47y8t" path="res://menu/menu.tscn" id="2_e3dby"]
+[ext_resource type="PackedScene" uid="uid://dsim4tucneg7f" path="res://game/game_scene.tscn" id="3_gf1f2"]
+[ext_resource type="PackedScene" uid="uid://dfwtl0fn4c3mv" path="res://music/music_player.tscn" id="4_em1bs"]
+[ext_resource type="PackedScene" uid="uid://ds35xg0edwioj" path="res://sfx/sfx_player.tscn" id="5_gf1f2"]
+[ext_resource type="PackedScene" uid="uid://jbivaekn7f41" path="res://ui/debug_overlay.tscn" id="6_3qcir"]
+
+[node name="Game" type="Node2D" unique_id=2092536864]
+script = ExtResource("1_e64el")
+menu_packed = ExtResource("2_e3dby")
+game_packed = ExtResource("3_gf1f2")
+music_player_packed = ExtResource("4_em1bs")
+sfx_player_packed = ExtResource("5_gf1f2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=438304936]
+layer = 5
+
+[node name="DebugOverlay" parent="CanvasLayer" unique_id=1502708187 instance=ExtResource("6_3qcir")]
+mouse_behavior_recursive = 1

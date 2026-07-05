@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://wn4cp784tpgd"]
+
+[ext_resource type="Script" uid="uid://y27enx47d7dk" path="res://game/game_menu.gd" id="1_6jy2e"]
+[ext_resource type="Texture2D" uid="uid://csqdvwvp0n5gr" path="res://assets/images/ui/button.png" id="1_tup5k"]
+[ext_resource type="FontFile" uid="uid://v0ffru6xd5o1" path="res://assets/fonts/VT323-Regular.ttf" id="2_6jy2e"]
+
+[node name="GameMenu" type="Control" unique_id=13554309]
+process_mode = 3
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6jy2e")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1324908394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1228799192]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Settings" type="TextureButton" parent="VBoxContainer" unique_id=810526330]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_tup5k")
+
+[node name="Label" type="Label" parent="VBoxContainer/Settings" unique_id=386878586]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.20784314, 0.23137255, 0.28627452, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("2_6jy2e")
+theme_override_font_sizes/font_size = 48
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=15892814]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Exit" type="TextureButton" parent="VBoxContainer" unique_id=1562554834]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_tup5k")
+
+[node name="Label" type="Label" parent="VBoxContainer/Exit" unique_id=1398630217]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.20784314, 0.23137255, 0.28627452, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("2_6jy2e")
+theme_override_font_sizes/font_size = 48
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
