@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dr7mauixkn17a"]
+
+[ext_resource type="Script" uid="uid://cn0uct6ndhxr" path="res://game/fishy.gd" id="1_doy37"]
+[ext_resource type="Texture2D" uid="uid://brncub7xmf12u" path="res://assets/sprites/Red.png" id="1_msmbl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doy37"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdbb8"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulc3r"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4py5"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fygeq"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6nn3"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(160, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbu4o"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(192, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3qcg"]
+atlas = ExtResource("1_msmbl")
+region = Rect2(224, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_063ex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doy37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdbb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulc3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4py5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fygeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6nn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbu4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3qcg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doy37"]
+size = Vector2(20, 12)
+
+[node name="Player" type="CharacterBody2D" unique_id=2117586913]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_doy37")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=166456450]
+position = Vector2(-1, -6)
+sprite_frames = SubResource("SpriteFrames_063ex")
+autoplay = "default"
+frame = 1
+frame_progress = 0.962156
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2006068041]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_doy37")
+
+[node name="Timer" type="Timer" parent="." unique_id=1864432702]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
