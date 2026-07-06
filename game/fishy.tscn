@@ -75,6 +75,13 @@ collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_doy37")
 
+[node name="FishyFinder" type="ColorRect" parent="." unique_id=1773004551]
+visible = false
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = 14.0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=166456450]
 position = Vector2(-1, -6)
 sprite_frames = SubResource("SpriteFrames_063ex")
@@ -87,7 +94,6 @@ position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_doy37")
 
 [node name="Timer" type="Timer" parent="." unique_id=1864432702]
-wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

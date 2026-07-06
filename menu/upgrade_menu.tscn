@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://b5hb4uim14drg"]
+
+[ext_resource type="Script" uid="uid://bs5gnpmynepqb" path="res://menu/upgrade_menu.gd" id="1_qahw2"]
+
+[node name="UpgradeMenu" type="Control" unique_id=1144674613]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qahw2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1224155890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1525673140]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=809895568]
+layout_mode = 2
+text = "Fishy Upgrade"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1537636733]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/v_separation = 8
+
+[node name="UpgradeSpeed" type="Button" parent="VBoxContainer/GridContainer" unique_id=485318832]
+layout_mode = 2
+text = "Upgrade Speed - $20"
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=576262566]
+layout_mode = 2
+text = "Unfriendlies"
+horizontal_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="VBoxContainer" unique_id=2034018860]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/v_separation = 8
+
+[node name="UpgradeSpawn" type="Button" parent="VBoxContainer/GridContainer2" unique_id=1033415309]
+layout_mode = 2
+text = "Upgrade Food Spawn - $50"
+
+[node name="UpgradeUltraSpawn" type="Button" parent="VBoxContainer/GridContainer2" unique_id=784310543]
+layout_mode = 2
+text = "Upgrade 	Ultra Spawn - $150"
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=1304513301]
+layout_mode = 2
+text = "Continue?"
+horizontal_alignment = 1
+
+[node name="GridContainer3" type="GridContainer" parent="VBoxContainer" unique_id=1316394101]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/v_separation = 8
+
+[node name="SaveAndQuit" type="Button" parent="VBoxContainer/GridContainer3" unique_id=1358721081]
+layout_mode = 2
+text = "Save and quit"
+
+[node name="Continue" type="Button" parent="VBoxContainer/GridContainer3" unique_id=1335582596]
+layout_mode = 2
+text = "Continue"
+
+[connection signal="pressed" from="VBoxContainer/GridContainer/UpgradeSpeed" to="." method="_on_upgrade_speed_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer2/UpgradeSpawn" to="." method="_on_upgrade_spawn_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer2/UpgradeUltraSpawn" to="." method="_on_upgrade_ultra_spawn_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer3/Continue" to="." method="_on_continue_pressed"]

@@ -83,7 +83,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8352941, 0.25490198, 1)
 theme_override_fonts/font = ExtResource("3_ru5ln")
 theme_override_font_sizes/font_size = 27
-text = "500"
+text = "0"
 
 [node name="SeedInfo" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=764897157]
 visible = false
