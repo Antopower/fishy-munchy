@@ -29,6 +29,7 @@ func _on_player_died() -> void:
 func reset_level() -> void:
 	player.scale = Vector2(1, 1)
 	GameManager.set_game_over(false)
+	self.set_process_mode(PROCESS_MODE_ALWAYS)
 	
 func spawn_new_fish() -> void:
 	# Reset spawn timer

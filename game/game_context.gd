@@ -52,7 +52,6 @@ func toggle_upgrade_menu() -> void:
 func handle_continue_after_upgrade() -> void:
 	toggle_upgrade_menu()
 	currrent_scenario.reset_level()
-	currrent_scenario.set_process_mode(PROCESS_MODE_ALWAYS)
 	
 func handle_request_main_menu() -> void:
 	request_main_menu.emit()
